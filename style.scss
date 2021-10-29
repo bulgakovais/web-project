@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    max-width: 1600px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header{
+    margin-left: 20px;
+    color: rgb(123, 44, 64);
+}
+.img_width{
+    width: 100%;
+}
+.gallery{
+    display: grid;
+    grid-template-columns:  repeat(3, minmax(200px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 2em;
+    
+}
+
+.card{
+    background: #9b7c7c;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+.item_data{
+    padding: 2px 20px;
+    font-size: 18px;
+}
+.audio_img_container{
+    border: 1px solid rgb(94, 86, 86);
+    background-image: url(https://wallpage.ru/imgbig/wallpapers_80353.jpg);
+    background-size: cover;
+   
+}
+.item_img{
+    width: 100%;
+}
+
+@media(max-width: 1024px){
+    
+    .gallery{
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
+    }
+
+    .item_data{
+        font-size: 20px;
+    }
+}   
+
+@media(max-width: 768px){
+    
+    .gallery{
+    grid-template-columns: 1fr;
+    grid-column-gap: 16px;
+    }
+    .audio_card{
+        height: 548px;
+    }
+    audio::-webkit-media-controls-panel{
+       top: 50px
+    }
+    .item_data{
+        font-size: 26px;
+    }
+}   
+
+audio::-webkit-media-controls-panel{
+    background: #9b7c7c;
+    border:none;
+    height: inherit;
+}
